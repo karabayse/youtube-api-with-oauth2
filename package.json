@@ -2,7 +2,7 @@
   "name": "youtube-api-with-oauth2",
   "version": "1.0.0",
   "description": "YouTube API with OAuth2",
-  "main": "client.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/karabayse/youtube-api-with-oauth2#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3"
   }
 }
