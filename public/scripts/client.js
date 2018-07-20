@@ -74,6 +74,19 @@ function getChannel(channel) {
   })
   .then(response => {
     console.log(response);
+    const channel = response.result.items[0];
+    const output = `
+      <ul class="collection">
+        <li class="collection-item">Title: ${channel.snippet.title}</li>
+        <li class="collection-item">ID: ${channel.id}</li>
+        <li class="collection-item">Subscribers: ${channel.statistics.subscriberCount}</li>
+        <li class="collection-item">views: ${channel.statistics.viewCount}</li>
+        <li class="collection-item">Videos: ${channel.statistics.videoCount}</li>
+      </ul>
+      <p>${channel.snippet.description}</p>
+      <hr>
+      <a class="btn grey darken-2" target="_blank" href="https://youtube.com/${channel.snippet.customUrl}">Visit Channel</a>
+    `;
   })
   .catch(err => alert('No Channel By That Name'));
 }
